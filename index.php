@@ -26,10 +26,10 @@
                                 <center>Inicio de sesión</center>
                             </span>
 
-                            <form action="login/index.php" method="post" autocomplete="off">
+                            <form action="/assets/login/index.php" method="post" autocomplete="off">
                                 <div class="input-field">
                                     <i class="material-icons prefix"></i>
-                                    <input type="text" name="usuario" id="usuario" title="Letras mayúsculas entre 8 y 15 caracteres" required pattern="[A-Z]{8,15}" autofocus>
+                                    <input type="text" name="usuario" id="usuario" title="Letras mayúsculas entre 8 y 15 caracteres" required autofocus>
                                     <label for="usuario">Usuario</label>
                                     <span class="helper-text" data-error="Formato no válido" data-success="Formato correcto"></span>
                                 </div>

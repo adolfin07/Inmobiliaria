@@ -1,8 +1,8 @@
 <?php
 include '../conexion/conexion.php';
 
-// Definición de variables
-$mensaje = htmlentities($_GET['msj'] ?? ''); // Usar el operador de fusión de null para evitar errores
+
+$mensaje = htmlentities($_GET['msj'] ?? '');
 $c = htmlentities($_GET['c'] ?? '');
 $p = htmlentities($_GET['p'] ?? '');
 $t = htmlentities($_GET['t'] ?? '');
@@ -11,8 +11,13 @@ switch ($c) {
     case 'us':
         $carpeta = '../usuarios/';
         break;
-    default:
-        $carpeta = '../'; // Default o caso no reconocido
+
+    case 'home':
+        $carpeta = '../inicio';
+        break;
+
+    case 'salir':
+        $carpeta = '../';
         break;
 }
 
@@ -20,8 +25,13 @@ switch ($p) {
     case 'in':
         $pagina = 'index.php';
         break;
-    default:
-        $pagina = 'default.php'; // Página por defecto si no se encuentra
+
+    case 'home':
+        $carpeta = '/index.php';
+        break;
+
+    case 'salir':
+        $pagina = '';
         break;
 }
 
